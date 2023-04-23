@@ -574,6 +574,7 @@ function(
         unreadCount.text('0');
         unreadCount.addClass('hidden');
         decrementTotalUnreadConversationCount(root);
+        PubSub.publish(MessageDrawerEvents.CONVERSATION_DECREMENT);
     };
 
     /**
